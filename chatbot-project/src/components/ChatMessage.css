@@ -1,0 +1,25 @@
+.user-message {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 10px;
+}
+
+.bot-message {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 10px;
+}
+
+.message-content {
+  background-color: #f1f0f0;
+  padding: 15px 20px;
+  border-radius: 10px;
+  margin: 0px 10px;
+  max-width: 300px;
+}
+
+.msg-profile {
+  width: 45px;
+}
