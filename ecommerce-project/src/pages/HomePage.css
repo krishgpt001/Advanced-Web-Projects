@@ -1,0 +1,203 @@
+main.home {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Items Grid */
+.itemss-grid {
+    display: grid;  
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+/* Item Card */
+.item-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1rem;
+    text-align: left;
+}
+
+.item-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 0.8rem;
+}
+
+.item-name {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+/* Rating */
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.rating i {
+    color: #ffc107;
+}
+
+.rating-text {
+    color: #666;
+    font-size: 0.85rem;
+    margin-left: 0.3rem;
+}
+
+/* Item Price */
+.item-price {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #4a90e2;
+    margin-bottom: 1rem;
+}
+
+/* Quantity Select */
+.Quantity {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.Quantity:focus {
+    outline: none;
+    border-color: #4a90e2;
+}
+
+/* Add to Cart Button */
+.add-to-cart-button {
+    width: 100%;
+    padding: 0.7rem;
+    background: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.add-to-cart-button:hover {
+    background: #357abd;
+}
+
+/* Orders Link */
+.orders-link {
+    color: white !important;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+}
+
+.orders-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Utility Classes */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Responsive Design - Updates */
+@media (max-width: 1024px) {
+    .itemss-grid {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 1.3rem;
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .itemss-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .item-image {
+        height: 120px;
+    }
+
+    .item-name {
+        font-size: 1rem;
+    }
+
+    .item-price {
+        font-size: 1.1rem;
+    }
+
+    .add-to-cart-button {
+        padding: 0.6rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .itemss-grid {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+        gap: 0.8rem;
+        padding: 0.8rem;
+    }
+
+    .item-card {
+        padding: 0.8rem;
+    }
+
+    .item-image {
+        height: 100px;
+    }
+
+    .item-name {
+        font-size: 0.9rem;
+    }
+
+    .item-price {
+        font-size: 1rem;
+    }
+
+    .rating {
+        font-size: 0.8rem;
+    }
+
+    .Quantity {
+        padding: 0.4rem;
+        font-size: 0.85rem;
+    }
+
+    .add-to-cart-button {
+        padding: 0.5rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .itemss-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .item-card {
+        padding: 0.8rem;
+    }
+
+    .item-image {
+        height: 150px;
+    }
+}
