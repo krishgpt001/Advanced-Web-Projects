@@ -1,32 +1,14 @@
-// import { FaCartShopping } from "react-icons/fa6";
-import './header.css';
 import './homePage.css';
+import { Header } from '../components/Header';
 
 export function HomePage() {
     return (
         <>
             <title>Ecommerce Project</title>
-
-            <header className="nav-bar">
-                <div className="left-section">
-                    <h1>BuyNest</h1>
-                </div>
-                <div className="search-bar middle-section">
-                    <input type="text" placeholder="Search here..." />
-                    <button>➜</button>
-                </div>
-                <div className="right-section">
-                    <a href="/orders" className="orders-link">Orders</a>
-                    <a href="/checkout" className="cart-link">
-                        <i className="fas fa-shopping-cart cart-icon"></i>
-                        <span className="cart-quantity">3</span>
-                        <span className="cart-text">Cart</span>
-                    </a>
-                </div>
-            </header>
+            <Header />
 
             <main className="home">
-                <div className="itemss-grid">
+                <div className="items-grid">
                     <div className="item-card">
                         <img src="football.jpg" alt="Football" className="item-image" />
                         <h3 className="item-name">Football</h3>

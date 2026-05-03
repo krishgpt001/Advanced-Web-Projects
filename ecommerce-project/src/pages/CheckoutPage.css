@@ -29,6 +29,19 @@ body {
     color: #2c3e50;
 }
 
+.checkout-header .left-section .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #007bff;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.checkout-header .left-section .logo:hover {
+    color: #0056b3;
+}
+
 .checkout-header .left-section h1 {
     color: #007bff;
 }

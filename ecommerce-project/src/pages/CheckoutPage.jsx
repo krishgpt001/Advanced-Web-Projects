@@ -1,3 +1,4 @@
+import { Link } from 'react-router';
 import './CheckoutPage.css'
 import { IoBagCheckOutline } from "react-icons/io5";
 
@@ -7,7 +8,7 @@ export function CheckoutPage() {
             <title>Checkout</title>
             <header className="checkout-header">
                 <div className="left-section">
-                    <h1>BuyNest</h1>
+                    <Link to="/" className="logo">BuyNest</Link>
                 </div>
                 <div className="middle-section">
                     <h1>Checkout<span className="checkout-items">(3 items)</span></h1>
