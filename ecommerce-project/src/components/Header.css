@@ -16,6 +16,19 @@ header .left-section {
     flex-shrink: 0;
 }
 
+header .left-section .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+header .left-section .logo:hover {
+    color: #0056b3;
+}
+
 header h1 {
     font-size: 1.8rem;
     font-weight: bold;

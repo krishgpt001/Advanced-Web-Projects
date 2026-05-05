@@ -57,6 +57,11 @@ main.home {
     color: #ffc107;
 }
 
+.product-rating-stars {
+    width: 100px;
+    height: 18px;
+}
+
 .rating-text {
     color: #666;
     font-size: 0.85rem;
