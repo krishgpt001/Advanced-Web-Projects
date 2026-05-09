@@ -3,10 +3,10 @@ import { useNavigate, Link } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
 import './Auth.css'
 
-const Register = () => {
-  const [formData, setFormData] = useState({ name: '', email: '', password: '' })
+const Login = () => {
+  const [formData, setFormData] = useState({ email: '', password: '' })
   const [localError, setLocalError] = useState(null)
-  const { register, loading } = useAuth()
+  const { login, loading } = useAuth()
   const navigate = useNavigate()
 
   const handleChange = (e) => {
@@ -16,37 +16,21 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     setLocalError(null)
-    if (formData.password.length < 6) {
-      setLocalError('Password must be at least 6 characters')
-      return
-    }
     try {
-      await register(formData.name, formData.email, formData.password)
+      await login(formData.email, formData.password)
       navigate('/')
     } catch (err) {
-      setLocalError(err.response?.data?.error || 'Registration failed')
+      setLocalError(err.response?.data?.error || 'Login failed')
     }
   }
 
   return (
     <div className="auth">
-      <h2 className="auth__title">Create an account</h2>
+      <h2 className="auth__title">Welcome back</h2>
 
       {localError && <p className="auth__error">{localError}</p>}
 
       <form onSubmit={handleSubmit}>
-        <div className="auth__field">
-          <label className="auth__label">Name</label>
-          <input
-            className="auth__input"
-            type="text"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
-        </div>
-
         <div className="auth__field">
           <label className="auth__label">Email</label>
           <input
@@ -72,15 +56,15 @@ const Register = () => {
         </div>
 
         <button className="auth__btn" type="submit" disabled={loading}>
-          {loading ? 'Creating account...' : 'Register'}
+          {loading ? 'Logging in...' : 'Login'}
         </button>
       </form>
 
       <p className="auth__footer">
-        Already have an account? <Link to="/login">Login</Link>
+        Don't have an account? <Link to="/register">Register</Link>
       </p>
     </div>
   )
 }
 
-export default Register
+export default Login
